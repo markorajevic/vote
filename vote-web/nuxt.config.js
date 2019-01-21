@@ -57,6 +57,10 @@ module.exports = {
     // See https://github.com/nuxt-community/axios-module#options
   },
 
+  env: {
+    environment: process.env.NODE_ENV
+  },
+
   /*
   ** Build configuration
   */

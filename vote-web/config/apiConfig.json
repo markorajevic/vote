@@ -1,0 +1,4 @@
+{
+    "devApi": "http://localhost:8000/",
+    "prodApi": "http://voteapi.avocode.rs/"
+}
