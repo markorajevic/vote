@@ -44,7 +44,9 @@ export default {
     Logo,
     Navigation
   },
-  mounted() {},
+  mounted() {
+    this.$store.dispatch('country/LOAD_RESULTS')
+  },
   methods: {
     getFlag(code) {
       return 'https://www.countryflags.io/' + code + '/flat/16.png'

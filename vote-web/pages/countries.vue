@@ -13,12 +13,12 @@
           v-if="country.voted == 0"
         >
           <img :src="'https://www.countryflags.io/'+ country.code+'/flat/64.png'">
-          <span>{{country.voted}}</span>
+          <span>{{country.name}}</span>
         </router-link>
         <span class="h-100 h-100 d-flex justify-content-center align-items-center" v-else>
           <img :src="'https://www.countryflags.io/'+ country.code+'/flat/64.png'">
           
-          <span>{{country.voted}}</span>
+          <span>{{country.name}}</span>
         </span>
       </div>
     </div>
@@ -49,6 +49,9 @@ export default {
 </script>
 
 <style lang="scss" scoped="">
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
 @import '~/assets/scss/variables.scss';
 
 .container {
@@ -62,6 +65,9 @@ export default {
       transition: 0.3s all;
       position: relative;
       padding: 5rem 0;
+      @include media-breakpoint-down(md) {
+        width: 48%;
+      }
       &.disabled {
         background: $lightGrey;
         cursor: disabled;

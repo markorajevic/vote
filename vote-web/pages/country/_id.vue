@@ -1,8 +1,9 @@
 <template>
   <section class="container-fluid d-flex align-items-center flex-column justify-content-start">
+    <navigation class="mb-5"/>
+
     <div v-if="country.voted != 1">
-      <logo class="mt-5 mb-5 logo m-auto mb-4"/>
-      <div class="countries mt-5 w-100 d-flex flex-wrap justify-content-between">
+      <div class="countries w-100 d-flex flex-wrap justify-content-between">
         <h2 class="text-center w-100 mb-5">Hi {{country.name}}!</h2>
         <div class="row d-flex">
           <div class="col-md-6">
@@ -81,6 +82,7 @@
 import Logo from '~/components/Logo.vue'
 import api from '~/plugins/api'
 import Multiselect from 'vue-multiselect'
+import Navigation from '~/components/Navigation.vue'
 
 export default {
   data: () => ({
@@ -93,7 +95,8 @@ export default {
 
   components: {
     Logo,
-    Multiselect
+    Multiselect,
+    Navigation
   },
   mounted() {
     this.getCountry()
@@ -177,10 +180,7 @@ export default {
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/variables';
 @import '~bootstrap/scss/mixins';
-.logo {
-  max-width: 20rem;
-  margin-top: 5rem !important;
-}
+
 .vote-holder {
   width: 32%;
   padding: 1rem 0 2rem 0;
@@ -191,7 +191,7 @@ export default {
   justify-content: center;
   align-items: center;
   position: relative;
-  @include media-breakpoint-down(md) {
+  @include media-breakpoint-down(lg) {
     width: 48%;
   }
   .flag {
