@@ -18,7 +18,7 @@ module.exports = {
             ssh_options: ['StrictHostKeyChecking=no', 'PasswordAuthentication=no'],
             repo: 'git@github.com:markorajevic/vote.git',
             path: '/home/markorajevic/sites/vote/',
-            'post-deploy': 'cd vote-web && npm install && npm run build && pm2 restart vote9601'
+            'post-deploy': 'cd .. && cd vote-web && npm install && npm run build && pm2 restart vote9601'
         }
     }
 };
