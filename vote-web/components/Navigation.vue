@@ -1,5 +1,5 @@
 <template>
-  <section class="container d-flex align-items-center flex-column justify-content-center mt-4">
+  <section class="d-flex align-items-center flex-column justify-content-center mt-4 w-100">
     <logo class="mb-5"/>
     <div class="links d-flex pl-2 pr-2">
       <router-link
@@ -9,7 +9,7 @@
         <i class="fa fa-hand-stop-o mr-2"></i>
         <span>Results</span>
       </router-link>
-      <router-link class="link" :to="'/countries'">
+      <router-link class="link d-flex align-items-center justify-content-betwee" :to="'/countries'">
         <i class="fa fa-globe mr-2"></i>
         <span>Countries</span>
       </router-link>
@@ -28,10 +28,16 @@ export default {
 </script>
 
 <style lang="scss" scoped="">
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
 @import '~/assets/scss/variables.scss';
 
 .container {
   .links {
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
     .link {
       border-radius: 5px;
       padding: 2rem 5rem;
@@ -40,6 +46,11 @@ export default {
       border: 1px solid $grey;
       transition: 0.3s all;
       position: relative;
+      @include media-breakpoint-down(md) {
+        padding: 2rem 1rem;
+        width: 100%;
+        display: block;
+      }
       span {
         // position: absolute;
         // width: 100%;
