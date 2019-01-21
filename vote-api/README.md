@@ -1,4 +1,4 @@
-# vote-web
+# vote-api
 
 > Eurovision voting
 
@@ -51,7 +51,7 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
 ``` bash
 # install dependencies
-$ composer intall
+$ composer install
 
 # Migrate database
 $ php artisan migrate:fresh
