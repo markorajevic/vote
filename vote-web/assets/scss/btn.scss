@@ -1,0 +1,60 @@
+.btn{
+    padding: 1rem 3rem;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    background: none;
+    color: #333;
+    text-align: center;
+    @include border-radius(3px);
+    font-size: 0.9rem;
+
+    &.btn-primary{
+      border: 0;
+      color: #FFF;
+      background-color: $primary-button;
+
+    }
+    &.btn-success {
+      border: 0;
+      color: #FFF;
+      background-color: $confirm-button;
+    }
+    &.btn-danger {
+      border: 0;
+      color: #FFF;
+      background-color: $error-button;
+    }
+    &.btn-info {
+      border: 0;
+      color: #FFF;
+      background-color: $info-button;
+    }
+    &.btn-secondary {
+      border: 0;
+      color: #333;
+      background-color: transparent;
+      border: 2px solid $border-button;
+    }
+    &.btn-warning {
+      border: 0;
+      color: #FFF;
+      background-color: $warning-button;
+    }
+
+    &:hover {
+      cursor: pointer;
+      text-decoration: none;
+      @include transition(0.2s ease all);
+      box-shadow: 0 10px 20px 0 rgba(1,1,1,.15);
+      -webkit-box-shadow: 0 10px 20px 0 rgba(1,1,1,.15);
+
+    }
+  }
+
+  button[disabled], html input[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
