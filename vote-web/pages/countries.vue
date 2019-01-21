@@ -15,7 +15,11 @@
           <img :src="'https://www.countryflags.io/'+ country.code+'/flat/64.png'">
           <span>{{country.name}}</span>
         </router-link>
-        <span class="h-100 h-100 d-flex justify-content-center align-items-center" v-else>
+        <span
+          :class="{'disabled': country.voted }"
+          class="country h-100 h-100 d-flex justify-content-center align-items-center"
+          v-else
+        >
           <img :src="'https://www.countryflags.io/'+ country.code+'/flat/64.png'">
           
           <span>{{country.name}}</span>
