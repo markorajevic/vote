@@ -1,7 +1,7 @@
 <template>
   <section class="container d-flex align-items-center flex-column justify-content-center mt-4">
     <logo class="mb-5"/>
-    <div class="links d-flex">
+    <div class="links d-flex pl-2 pr-2">
       <router-link
         class="link d-flex align-items-center justify-content-between mr-4"
         :to="'/results'"
