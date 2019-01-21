@@ -22,3 +22,39 @@ a {
         color: $black;
     }
 }
+
+.links {
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+    .link {
+      border-radius: 5px;
+      padding: 2rem 5rem;
+      color: black;
+      font-size: 1rem;
+      border: 1px solid $grey;
+      transition: 0.3s all;
+      position: relative;
+      @include media-breakpoint-down(md) {
+        padding: 2rem 1rem;
+        width: 100%;
+        display: block;
+      }
+      span {
+        // position: absolute;
+        // width: 100%;
+        // left: 0;
+        // bottom: 0;
+        // // border-top: 1px solid $grey;
+        // text-align: center;
+        // font-size: 1rem;
+        // padding: 0.5rem 0;
+      }
+      &:hover,
+      &.nuxt-link-active {
+        text-decoration: none;
+        border: 1px solid $lightGrey;
+        background: $lightGrey;
+      }
+    }
+  }
