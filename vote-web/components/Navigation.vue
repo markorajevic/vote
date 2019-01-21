@@ -9,7 +9,10 @@
         <i class="fa fa-hand-stop-o mr-2"></i>
         <span>Results</span>
       </router-link>
-      <router-link class="link d-flex align-items-center justify-content-betwee" :to="'/countries'">
+      <router-link
+        class="link d-flex align-items-center justify-content-between"
+        :to="'/countries'"
+      >
         <i class="fa fa-globe mr-2"></i>
         <span>Countries</span>
       </router-link>
